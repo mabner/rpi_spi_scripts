@@ -22,6 +22,8 @@ while True:
     print(hostname)
     print("---------------------")
     print(ip.getsockname()[0])
+    print("---------------------")
+    print(ext_ip)
     with canvas(device) as draw:
         draw.rectangle(device.bounding_box, outline="white", fill="black")
         draw.text((5, 5), hostname, fill="white")
