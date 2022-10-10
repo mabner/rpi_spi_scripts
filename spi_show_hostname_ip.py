@@ -18,12 +18,13 @@ ip.connect(("0.0.0.0", 80))
 # External IP
 topology, ext_ip, ext_port = get_ip_info()
 
+print(hostname)
+print("---------------------")
+print(ip.getsockname()[0])
+print("---------------------")
+print(ext_ip)
+
 while True:
-    print(hostname)
-    print("---------------------")
-    print(ip.getsockname()[0])
-    print("---------------------")
-    print(ext_ip)
     with canvas(device) as draw:
         draw.rectangle(device.bounding_box, outline="white", fill="black")
         draw.text((5, 5), hostname, fill="white")
